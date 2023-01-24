@@ -2,16 +2,14 @@ package com.company;
 
 public class Product {
     private  String name;
-    private int quantity = 1;
+    private int quantity;
     private int price;
+    private int cod;
 
-    public Product (String name,int quantity, int price){
+    public Product (int cod,String name,int quantity, int price){
+        this.cod = cod;
         this.name = name;
         this.quantity  = quantity;
-        this.price = price;
-    }
-    public Product (String name,int price){
-        this.name = name;
         this.price = price;
     }
 
@@ -27,19 +25,18 @@ public class Product {
         return price;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getCod() {
+        return cod;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
     public String toString(){
-        return "Наименование: " + getName() +
+
+        return  "Код: " + getCod() + ". "+
+                "Наименование: " + getName() +
                 " Цена: " + getPrice() +" pуб.";
 
     }
