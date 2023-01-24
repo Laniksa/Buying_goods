@@ -38,4 +38,10 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+    public String toString(){
+        return "Наименование: " + getName() +
+                " Цена: " + getPrice() +" pуб.";
+
+    }
+
 }
